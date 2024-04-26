@@ -6,7 +6,7 @@ retriever = RagRetriever.from_pretrained("facebook/rag-token-nq", dataset="wiki_
 model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=retriever).to('cuda')
 
 # Example query
-input_query = "What is the capital of France?"
+input_query = "What is the bittensor?"
 
 # Encode the input query
 input_ids = tokenizer(input_query, return_tensors="pt").input_ids.to('cuda')
