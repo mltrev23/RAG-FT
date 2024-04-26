@@ -30,7 +30,7 @@ print('------------------------------------------------')
 model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=retriever).to('cuda')
 
 # Example query
-input_query = "What is the bittensor?"
+input_query = "What is bittensor?"
 # stopping_criteria=StoppingCriteriaList([MaxLengthCriteria(max_length=max_length)])
 # stopping_criteria=StoppingCriteriaList([EosTokenCriteria(eos_token_id=eos_token_id)])
 # Encode the input query
