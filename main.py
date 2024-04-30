@@ -8,16 +8,6 @@ transformers_logging.set_verbosity_error()
 from transformers import RagTokenizer, RagTokenForGeneration, RagRetriever
 from datasets import load_dataset
 
-"""
-dataset = load_dataset('text', data_files='bittensor.txt', split = 'train')
-data_dict = dataset.to_dict()
-
-#json_str = json.dumps(data_dict, ensure_ascii=False, indent=4)
-
-# Convert to JSON and write to a file
-with open('dataset.json', 'w', encoding='utf-8') as f:
-    json.dump(data_dict, f, ensure_ascii=False, indent=4)
-"""
 dataset = load_dataset('json', data_files='dataset.json', split='train')
 dataset = [dataset]
 print(dataset)
